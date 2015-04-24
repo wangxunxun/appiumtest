@@ -3,13 +3,9 @@
 
 import os
 import unittest
-from selenium.webdriver.common.by import By
 from appium import webdriver
-from _elementtree import Element
-import HTMLTestRunner
-import datetime
-from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.wait import WebDriverWait
+from test_cases import *
 
 # Returns abs path relative to this file and not cwd
 PATH = lambda p: os.path.abspath(

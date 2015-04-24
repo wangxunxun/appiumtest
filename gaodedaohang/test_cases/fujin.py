@@ -1,8 +1,10 @@
 #coding=utf-8
 from time import sleep
 
-
-from . import common
+from selenium.webdriver.common.by import By
+from _elementtree import Element
+from selenium.webdriver.support import expected_conditions as EC
+from .. import common
 
 class fujin(common.common_cases):
     
@@ -32,7 +34,7 @@ class fujin(common.common_cases):
     def test_search(self):
         self.entermainpage()
         self.driver.swipe(500,500, 300,500,1000)
-        sleep(2)
+        self.wait.until(EC.element_to_be_clickable((By.ID,'com.autonavi.xmgd.navigator:id/map_title_searchbar')))
         self.driver.find_element_by_id('com.autonavi.xmgd.navigator:id/map_title_searchbar').click()
         self.driver.find_element_by_id('com.autonavi.xmgd.navigator:id/search_edit').send_keys(u"武汉")
 
