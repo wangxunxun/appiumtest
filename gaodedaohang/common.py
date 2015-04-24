@@ -16,14 +16,15 @@ from selenium.webdriver.support import expected_conditions as EC
 class common_cases(Init_Test):
 
     def entermainpage(self):
-        self.wait.until(EC.element_to_be_clickable((By.ID,'com.autonavi.xmgd.navigator:id/checkbox_ignore')))
+        self.wait.until(EC.presence_of_element_located((By.ID,'com.autonavi.xmgd.navigator:id/checkbox_ignore')))
         self.driver.find_element_by_id('com.autonavi.xmgd.navigator:id/checkbox_ignore').click()
         self.driver.find_element_by_id('com.autonavi.xmgd.navigator:id/btn_accept').click()
         sleep(1)
         self.driver.swipe(700, 500, 100, 500, 1000)
         sleep(1)
         self.driver.swipe(700, 500, 100, 500, 1000)
-        self.driver.find_element_by_id('com.autonavi.xmgd.navigator:id/guide_btn_end').click()        
-        sleep(15)
+        self.driver.find_element_by_id('com.autonavi.xmgd.navigator:id/guide_btn_end').click()   
+        sleep(15)     
+#        self.wait.until(EC.presence_of_element_located((By.ID,'com.autonavi.xmgd.navigator:id/map_tool_bar_nearby_text')))
 
         

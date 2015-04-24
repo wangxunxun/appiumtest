@@ -18,6 +18,7 @@ import datetime
 #alltests =  unittest.TestSuite([suite_login,suite_setting])
 test = unittest.TestLoader().loadTestsFromName('gaodedaohang.test_cases.fujin.fujin.test_search')
 unittest.TextTestRunner(verbosity=2).run(test)
+
 '''
 filename = 'D:/autotestreport/ALE_SERVER_test/testreport_' + datetime.datetime.now().strftime('%Y-%m-%d %H-%M') + '.html' 
 fp=file(filename,'wb')

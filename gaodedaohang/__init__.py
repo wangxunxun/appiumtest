@@ -4,6 +4,7 @@
 import os
 import unittest
 from appium import webdriver
+
 from selenium.webdriver.support.wait import WebDriverWait
 from test_cases import *
 
@@ -31,7 +32,7 @@ class Init_Test(unittest.TestCase):
         desired_caps['appPackage'] = 'com.autonavi.xmgd.navigator'
         desired_caps['appActivity'] = 'com.autonavi.xmgd.navigator.Warn'
         self.driver = webdriver.Remote('http://localhost:4723/wd/hub', desired_caps)
-        self.wait = WebDriverWait(self.driver, 10)        
+        self.wait = WebDriverWait(self.driver, 20)        
         
 
 
@@ -87,4 +88,16 @@ class Init_Test(unittest.TestCase):
                 i=i+1      
         else:
             print('There are no edittext')
+            
+    def getimagebutton(self):        
+        imagebutton=self.driver.find_elements_by_class_name('android.widget.ImageButton')
+        if imagebutton:
+            print('The number of imagebutton on the page is:%s ' % len(imagebutton))
+            i=0
+            while i<len(imagebutton):
+                print('The %s imagebutton is:%s' % (i+1,imagebutton[i].text))
+                i=i+1      
+        else:
+            print('There are no imagebutton')            
+    
             

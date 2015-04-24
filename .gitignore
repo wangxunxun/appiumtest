@@ -5,3 +5,5 @@
 /gaodedaohang/test_cases/*.pyc
 /test_report/*.pyc
 /*.pyc
+/sql_test/*.pyc
+/gaodedaohang/*.pyc
