@@ -260,11 +260,12 @@ class sendAPI:
 
 
 if __name__ == '__main__':
-
-
-#    cc = sendAPI("http://127.0.0.1:5000/api/v1.0/users/",userdata)
+    
+    userdata = [{"version_number":"115541","download_url":"34343434343"}]
+    cc = sendAPI("http://127.0.0.1:5000/api/v1.0/version",userdata)
+    cc.run()
 #    cc.run()
-    a =oprMysql('69.164.202.55','test','test','test',3306,"utf8")
+#    a =oprMysql('69.164.202.55','test','test','test',3306,"utf8")
 
 #    a.toExcel('D:/demo.xls')
     
